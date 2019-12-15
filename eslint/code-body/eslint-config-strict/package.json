@@ -1,0 +1,159 @@
+{
+  "_from": "eslint-config-strict",
+  "_id": "eslint-config-strict@14.0.1",
+  "_inBundle": false,
+  "_integrity": "sha1-Y6/LVfo3uLU57ZRvAu3m/SACs0c=",
+  "_location": "/eslint-config-strict",
+  "_phantomChildren": {
+    "ajv-keywords": "2.1.1",
+    "babel-code-frame": "6.26.0",
+    "chalk": "2.4.2",
+    "circular-json": "0.3.3",
+    "cli-width": "2.2.0",
+    "co": "4.6.0",
+    "concat-stream": "1.6.2",
+    "escape-string-regexp": "1.0.5",
+    "eslint-visitor-keys": "1.1.0",
+    "esquery": "1.0.1",
+    "esrecurse": "4.2.1",
+    "estraverse": "4.3.0",
+    "esutils": "2.0.3",
+    "fast-json-stable-stringify": "2.1.0",
+    "functional-red-black-tree": "1.0.1",
+    "glob": "7.1.6",
+    "graceful-fs": "4.2.3",
+    "iconv-lite": "0.4.24",
+    "imurmurhash": "0.1.4",
+    "is-resolvable": "1.1.0",
+    "js-yaml": "3.13.1",
+    "json-stable-stringify-without-jsonify": "1.0.1",
+    "levn": "0.3.0",
+    "lodash": "4.17.15",
+    "lru-cache": "4.1.5",
+    "minimatch": "3.0.4",
+    "mkdirp": "0.5.1",
+    "ms": "2.1.2",
+    "natural-compare": "1.4.0",
+    "object-assign": "4.1.1",
+    "optionator": "0.8.3",
+    "path-is-inside": "1.0.2",
+    "pluralize": "7.0.0",
+    "progress": "2.0.3",
+    "require-uncached": "1.0.3",
+    "rimraf": "2.6.3",
+    "run-async": "2.3.0",
+    "rx-lite": "4.0.8",
+    "rx-lite-aggregates": "4.0.8",
+    "shebang-command": "1.2.0",
+    "signal-exit": "3.0.2",
+    "text-table": "0.2.0",
+    "through": "2.3.8",
+    "tmp": "0.0.33",
+    "which": "1.3.1"
+  },
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "eslint-config-strict",
+    "name": "eslint-config-strict",
+    "escapedName": "eslint-config-strict",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/eslint-config-strict/-/eslint-config-strict-14.0.1.tgz",
+  "_shasum": "63afcb55fa37b8b539ed946f02ede6fd2002b347",
+  "_spec": "eslint-config-strict",
+  "_where": "/home/fabio/devel/terser-functional-tests",
+  "author": {
+    "name": "Keith Cirkel",
+    "email": "npm@keithcirkel.co.uk",
+    "url": "http://keithcirkel.co.uk/"
+  },
+  "bugs": {
+    "url": "https://github.com/keithamus/eslint-config-strict/issues"
+  },
+  "bundleDependencies": false,
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm t",
+      "commit-msg": "validate-commit-msg"
+    }
+  },
+  "dependencies": {
+    "eslint": "^4.1.1",
+    "eslint-plugin-filenames": "^1.1.0"
+  },
+  "deprecated": false,
+  "description": "ESLint sharable config for strict linting",
+  "devDependencies": {
+    "ghooks": "^1.3.2",
+    "semantic-release": "^4.3.5",
+    "travis-after-all": "^1.4.4",
+    "validate-commit-msg": "^2.8.2"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "indent": [
+        2,
+        2
+      ],
+      "quotes": [
+        2,
+        "single"
+      ],
+      "comma-dangle": [
+        2,
+        "always-multiline"
+      ]
+    }
+  },
+  "files": [
+    "*.js"
+  ],
+  "homepage": "https://github.com/keithamus/eslint-config-strict#readme",
+  "keywords": [
+    "check",
+    "checker",
+    "code",
+    "code checker",
+    "code linter",
+    "code standards",
+    "code style",
+    "enforce",
+    "eslint",
+    "eslintconfig",
+    "hint",
+    "jscs",
+    "jshint",
+    "lint",
+    "policy",
+    "quality",
+    "simple",
+    "strict",
+    "strict style",
+    "style",
+    "style checker",
+    "style linter",
+    "verify"
+  ],
+  "license": "MIT",
+  "main": "es6.js",
+  "name": "eslint-config-strict",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keithamus/eslint-config-strict.git"
+  },
+  "scripts": {
+    "semantic-release": "travis-after-all && semantic-release pre && npm publish && semantic-release post",
+    "test": "eslint ."
+  },
+  "version": "14.0.1"
+}

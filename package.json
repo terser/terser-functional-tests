@@ -1,0 +1,40 @@
+{
+  "name": "terser-functional-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terser/terser-functional-tests.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/terser/terser-functional-tests/issues"
+  },
+  "homepage": "https://github.com/terser/terser-functional-tests#readme",
+  "dependencies": {
+    "@terser/require-terser": "^1.0.1",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-strict": "^14.0.1",
+    "eslint-plugin-filenames": "^1.3.2",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "mocha": "^6.2.2",
+    "murmurhash": "0.0.2",
+    "ts-node-register": "^1.0.0"
+  }
+}

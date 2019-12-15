@@ -1,10 +1,11 @@
 'use strict';
 
+const assert = require('assert')
 const path = require('path');
 
 const babel = require('@babel/core');
 const coffee = require('coffee-script');
-const terser = require('../../../..')
+const terser = require(process.env.TERSER_PATH)
 
 const tsPreprocessor = require('./typescript/preprocessor');
 const createCacheKeyFunction = require('fbjs-scripts/jest/createCacheKeyFunction');
@@ -55,7 +56,7 @@ const babelOptions = {
   retainLines: true,
 };
 
-function process_(src, filePath) {
+function processCode(src, filePath) {
   if (filePath.match(/\.coffee$/)) {
     return coffee.compile(src, {bare: true});
   }
@@ -86,15 +87,37 @@ function process_(src, filePath) {
 
 module.exports = {
   process: (...args) => {
-    let src = process_(...args)
+    let src = processCode(...args)
 
     if (typeof src === 'object' && src.code) {
       src = src.code
-    } else if (typeof src !== 'string') {
-      throw 'up'
     }
+    assert(typeof src === 'string')
 
-    return terser.minify(src)
+    return terser.minify(src, {
+      keep_fnames: true,
+      compress: {
+        defaults: false,
+        //reduce_vars: true,
+        //inline: true,
+        //collapse_vars: true,
+        unused: true,
+        arrows: true,
+        booleans: true,
+        comparisons: true,
+        conditionals: true,
+        sequences: true,
+        evaluate: true,
+        side_effects: true,
+        switches: true,
+        typeofs: true,
+        properties: true,
+        dead_code: true
+      },
+      module: true,
+      mangle: false,
+      ecma: 9001.42069
+    })
   },
 
   getCacheKey: createCacheKeyFunction([
