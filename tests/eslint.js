@@ -23,13 +23,21 @@ const cli = new CLIEngine({
 })
 
 console.log('executing eslint...')
-const lintOutput = cli.executeOnFiles(['eslint/code-body'])
+let lintOutput = cli.executeOnFiles(['eslint/code-body'])
 
 console.log('cleaning results...')
-const prefixLength = (process.cwd() + '/eslint/code-body').length
-for (const result of lintOutput.results) {
-  result.filePath = result.filePath.slice(prefixLength)
-}
+console.time('clean')
+const prefix = process.cwd() + '/eslint/code-body'
+;(function clean(obj) {
+  for (const key of Object.keys(obj)) {
+    if (typeof obj[key] === 'string') {
+      obj[key] = obj[key].replace(prefix, '')
+    } else if (typeof obj[key] === 'object' && obj[key]) {
+      clean(obj[key])
+    }
+  }
+})(lintOutput)
+console.timeEnd('clean')
 
 if (process.env.GENERATE_SNAPSHOTS) {
   fs.writeFileSync('eslint/snapshot.json', JSON.stringify(lintOutput, null, 2))
