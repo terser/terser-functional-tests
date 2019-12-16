@@ -1,7 +1,0 @@
-{
-  "plugins": [
-    ["transform-destructuring", { "loose": true }],
-    "proposal-object-rest-spread",
-    ["external-helpers", { "helperVersion": "7.1.5" }]
-  ]
-}

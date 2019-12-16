@@ -1,8 +1,0 @@
-{
-  "caller": {
-    "name": "test-fixture",
-    "supportsStaticESM": true,
-    "supportsTopLevelAwait": true
-  },
-  "presets": ["env"]
-}
