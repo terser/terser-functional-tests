@@ -1687,7 +1687,7 @@ describe("ConfigArrayFactory", () => {
     });
 
     // This group moved from 'tests/lib/config/config-file.js' when refactoring to keep the cumulated test cases.
-    describe("loading config files should work properly.", () => {
+    describe.only("loading config files should work properly.", () => {
 
         /**
          * Load a given config file.

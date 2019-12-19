@@ -12,7 +12,7 @@ execSync('npm i --ignore-scripts && npm run pretest')
 
 addHook((code, filename) => {
   filename = filename.replace(process.cwd(), '')
-  if (/test/.test(filename)) return code
+  if (/test/.test(filename)) return code  // acorn probably tests with raw javascript functions that are supposed to reflect the output, so no minifying there.
   const { error, code: outCode } = terser.minify(code, {
     toplevel: true,
     compress: {
