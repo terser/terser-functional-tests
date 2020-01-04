@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const assert = require('assert');
 const { readFileSync, writeFileSync } = require('fs');
 const { execSync } = require('child_process');
