@@ -1,0 +1,16 @@
+{
+  "name": "computer-science",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "tape-es",
+    "test:watch": "tape-watch-es"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tape-es": "^1.1.1"
+  },
+  "engines": {
+    "node": ">=13.2"
+  }
+}
