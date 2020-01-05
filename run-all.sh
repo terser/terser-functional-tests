@@ -1,4 +1,6 @@
-#!/bin/bash -l
+#!/bin/bash
+
+source ~/.profile
 
 # Requires nvm to be installed on the environment. Runs as login shell to load user's login stuff
 
