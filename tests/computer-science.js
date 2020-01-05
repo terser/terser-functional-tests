@@ -10,7 +10,7 @@ execSync('npm i');
 
 const code = readFileSync('../computer-science/index.js').toString();
 const minified = minify(code);
-assert(!minified.error)
+assert(!minified.error, minified.error)
 writeFileSync('../computer-science/index.min.js', minified.code)
 
 execSync('npm t', { stdio: ['pipe', process.stdout, process.stderr] });
