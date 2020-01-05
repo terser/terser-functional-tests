@@ -1,11 +1,35 @@
-#!/bin/bash
+#!/bin/bash -l
 
-set -exuo pipefail
+# Requires nvm to be installed on the environment. Runs as login shell to load user's login stuff
 
 export TERSER_PATH=${TERSER_PATH:-$(pwd)/../terser}
 
-for test_script in tests/*; do
-    echo "Running ${test_script}"
-    "./${test_script}"
-done
+nvm install 12
+nvm install 13
+nvm use 12
+
+set -eo pipefail
+
+function header() {
+    echo "
+
+
+### running $1...
+"
+}
+
+header acorn.js
+./tests/acorn.js
+
+header react.js
+./tests/react.sh
+
+header eslint.js
+./tests/eslint.js
+
+header eslint-unit.js
+./tests/eslint-unit.js
+
+header computer-science.js
+nvm use 13 ./tests/computer-science.js
 
