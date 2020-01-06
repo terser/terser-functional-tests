@@ -1,0 +1,76 @@
+{
+  "name": "pbrute",
+  "version": "0.1.1",
+  "description": "A password strength calculator",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "xo",
+    "test": "ava",
+    "integration": "ava test/integration.js",
+    "coverage": "nyc ava -t",
+    "check-duplicate-code": "jsinspect -t 20 src",
+    "build": "npm run build-bare && npm run build-translations-only && npm run build-full",
+    "build-bare": "browserify --bare --standalone PBrute --exclude data/owasp-top-10000.js --exclude lib/i18n.json -o dist/bare.js lib/index.js && terser --compress --mangle --output dist/bare.min.js dist/bare.js",
+    "build-translations-only": "browserify --bare --standalone PBrute --exclude data/owasp-top-10000.js -o dist/translations-only.js lib/index.js && terser --compress --mangle --output dist/translations-only.min.js dist/translations-only.js",
+    "build-full": "browserify --bare --standalone PBrute -o dist/full.js lib/index.js && terser --compress --mangle --output dist/full.min.js dist/full.js",
+    "start": "node ./demo/server.js"
+  },
+  "author": "Alex Gustafsson",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "browserify": "^16.5.0",
+    "jsinspect": "^0.12.7",
+    "nyc": "^14.1.1",
+    "terser": "^4.4.0",
+    "xo": "^0.25.3"
+  },
+  "xo": {
+    "space": 2,
+    "esnext": true,
+    "rules": {
+      "curly": [
+        "error",
+        "multi-or-nest",
+        "consistent"
+      ],
+      "no-use-before-define": [
+        "error",
+        {
+          "classes": false
+        }
+      ],
+      "unicorn/catch-error-name": [
+        "error",
+        {
+          "name": "error"
+        }
+      ],
+      "dot-notation": [
+        "off"
+      ],
+      "quote-props": [
+        "off"
+      ],
+      "object-curly-spacing": [
+        "off"
+      ],
+      "no-new": [
+        "off"
+      ],
+      "padding-line-between-statements": [
+        "off"
+      ]
+    }
+  },
+  "ava": {
+    "files": [
+      "test/*.js",
+      "!test/integration.js"
+    ],
+    "concurrency": 5,
+    "failFast": false,
+    "verbose": true,
+    "compileEnhancements": false
+  }
+}

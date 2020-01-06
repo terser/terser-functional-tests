@@ -1,0 +1,125 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+
+html, body {
+  overflow: hidden;
+}
+
+html {
+  overflow-y: auto;
+  cursor: default;
+  font-family: 'Inter UI', sans-serif;
+  background-color: #1C2035;
+}
+
+html::before {
+  position: fixed;
+  display: block;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(120deg, #33395D 0%, #1C2035 100%);
+  z-index: -1;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter UI var alt', sans-serif;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 10px;
+}
+
+aside {
+  background-color: #414972;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 2px;
+}
+
+.hide {
+  display: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 720px;
+  min-width: 320px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,h2,p,a {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+h1 {
+  font-size: 48px;
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 5px 0;
+  color: white;
+  text-align: center;
+}
+
+input {
+  width: 320px;
+  padding: 15px 20px;
+  margin: 10px 0;
+  outline: none;
+  appearance: none;
+  --webkit-appearance: none;
+  background: none;
+  border: none;
+  border-radius: 2px;
+  background-color: #414972;
+  color: white;
+}
+
+p {
+  color: #AEB0BB;
+}
+
+a {
+  color: #F862CB;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  width: 100%;
+}
+
+li {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  align-items: center;
+  padding: 5px;
+}
+
+li > p:nth-of-type(2) {
+  text-align: right;
+}
+
+li:nth-of-type(2n) {
+  background-color: #414972;
+}

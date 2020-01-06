@@ -1,0 +1,84 @@
+{
+  "en-US": {
+    "instant": "instant",
+    "numbers": {
+      "hundred": "hundred",
+      "thousand": "thousand",
+      "million": "million",
+      "billion": "billion",
+      "trillion": "trillion",
+      "quadrillion": "quadrillion",
+      "quintillion": "quintillion",
+      "sextillion": "sextillion",
+      "septillion": "septillion",
+      "octillion": "octillion",
+      "nonillion": "nonillion",
+      "decillion": "decillion"
+    },
+    "characterSet": {
+      "lowercase": "lowercase letters",
+      "uppercase": "uppercase letters",
+      "digits": "digits",
+      "commonSpecial": "special characters",
+      "commonAccented": "accented characters"
+    },
+    "length": {
+       "veryShort": "Length: Very short",
+       "short": "Length: Short"
+    },
+    "common": {
+      "head": "Common password: The top",
+      "tail": "most common password"
+    },
+    "variety": "Character variety: Just",
+    "years": "years",
+    "months": "months",
+    "weeks": "weeks",
+    "days": "days",
+    "hours": "hours",
+    "minutes": "minutes",
+    "seconds": "seconds",
+    "milliseconds": "milliseconds"
+  },
+  "sv-SE": {
+    "instant": "omedelbart",
+    "numbers": {
+      "hundred": "hundra",
+      "thousand": "tusen",
+      "million": "miljoner",
+      "billion": "miljarder",
+      "trillion": "biljoner",
+      "quadrillion": "biljarder",
+      "quintillion": "triljoner",
+      "sextillion": "triljarder",
+      "septillion": "quadriljoner",
+      "octillion": "quadriljarder",
+      "nonillion": "quintiljoner",
+      "decillion": "quintiljarder"
+    },
+    "characterSet": {
+      "lowercase": "gemena bokstäver",
+      "uppercase": "versala bokstäver",
+      "digits": "siffror",
+      "commonSpecial": "specialtecken",
+      "commonAccented": "diakretiska tecken"
+    },
+    "length": {
+       "veryShort": "Längd: Väldigt kort",
+       "short": "Längd: Kort"
+    },
+    "common": {
+      "head": "Vanligt lösenord: Det",
+      "tail": "vanligaste lösenordet"
+    },
+    "variety": "Teckenvarians: Bara",
+    "years": "år",
+    "months": "månader",
+    "weeks": "veckor",
+    "days": "dagar",
+    "hours": "timmar",
+    "minutes": "minuter",
+    "seconds": "sekunder",
+    "milliseconds": "millisekunder"
+  }
+}

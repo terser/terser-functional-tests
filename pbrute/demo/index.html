@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <title>PBrute - calculate your passwords' strength</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+  </head>
+  <body>
+    <main>
+      <aside id="unsupported-notice" class="hide">
+        <p>PBrute is a modern library using modern features such as BigInt. Currently your browser is <b>not supported</b>. Chrome &geq;67 or Firefox &geq;68 is recommended. For up-to-date support see <a href="https://caniuse.com/#search=bigint">https://caniuse.com/#search=bigint</a>.</p>
+      </aside>
+      <h1>PBrute</h1>
+      <h2>Type your password below to calculate its strength</h2>
+      <input id="password" type="password" placeholder="Password" />
+      <ul id="comments">
+
+      </ul>
+      <p>This site does not save your password in any way - everything works completely in the browser and offline. The code is open source and available here: <a href="https://github.com/AlexGustafsson/pbrute">https://github.com/AlexGustafsson/pbrute</a>.</p>
+    </main>
+    <script src="/full.min.js"></script>
+    <script src="/index.js"></script>
+  </body>
+</html>
