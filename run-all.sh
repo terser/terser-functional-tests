@@ -26,14 +26,17 @@ function header() {
 header acorn.js
 ./tests/acorn.js
 
-header react.js
-./tests/react.sh
-
 header eslint.js
 ./tests/eslint.js
 
 header eslint-unit.js
 ./tests/eslint-unit.js
+
+header pbrute.sh
+./tests/pbrute.sh
+
+header react.js
+./tests/react.sh
 
 # Node 13 tests (need ESM)
 header computer-science.js
