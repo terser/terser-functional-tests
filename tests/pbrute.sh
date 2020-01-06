@@ -2,6 +2,8 @@
 
 set -exuo pipefail
 
+terser="$TERSER_PATH/bin/terser"
+
 cd pbrute
 
 npm ci
@@ -17,7 +19,7 @@ function on_exit {
 trap on_exit exit
 
 for file in $(find lib -type f | grep js$); do
-    terser "$file" --module -mc > "$file".min
+    "$terser" "$file" --module -mc > "$file".min
     mv "$file.min" "$file"
 done
 
