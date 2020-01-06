@@ -22,6 +22,7 @@ function header() {
 "
 }
 
+# Node 12 tests
 header acorn.js
 ./tests/acorn.js
 
@@ -34,6 +35,7 @@ header eslint.js
 header eslint-unit.js
 ./tests/eslint-unit.js
 
+# Node 13 tests (need ESM)
 header computer-science.js
-nvm use 13 ./tests/computer-science.js
+nvm run 13 ./tests/computer-science.js
 
