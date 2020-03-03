@@ -8,9 +8,8 @@ source ~/.nvm/nvm.sh
 
 export TERSER_PATH=${TERSER_PATH:-$(pwd)/../terser}
 
-nvm install 12
-nvm install 13
-nvm use 12
+echo "NEED NODE 12"
+node -v
 
 set -eo pipefail
 
@@ -40,5 +39,5 @@ header react.js
 
 # Node 13 tests (need ESM)
 header computer-science.js
-nvm run 13 ./tests/computer-science.js
+./tests/computer-science.js
 

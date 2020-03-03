@@ -1,33 +1,34 @@
-import test from 'tape';
-import { QuickSort } from '../index.min.js';
+"use strict";
 
-test('QuickSort(array) - should sort the array', t => {
-  const data = ['CC', 'BB', 'BB', 'BB', 'BB', 'CC', 'AA', 'BB'];
-  const expected = ['AA', 'BB', 'BB', 'BB', 'BB', 'BB', 'CC', 'CC'];
-  const result = QuickSort(data);
+var _tape = _interopRequireDefault(require("tape"));
 
+var _indexMin = require("../index.min.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+(0, _tape["default"])('QuickSort(array) - should sort the array', function (t) {
+  var data = ['CC', 'BB', 'BB', 'BB', 'BB', 'CC', 'AA', 'BB'];
+  var expected = ['AA', 'BB', 'BB', 'BB', 'BB', 'BB', 'CC', 'CC'];
+  var result = (0, _indexMin.QuickSort)(data);
   t.deepEqual(expected, result, 'Output should be sorted');
-
   t.end();
 });
-
-test('QuickSort(array) - should sort the array', t => {
-  const data = [5, 3, 88, 1, 23, 5, 0, -4];
-  const expected = [-4, 0, 1, 3, 5, 5, 23, 88];
-  const result = QuickSort(data);
-
+(0, _tape["default"])('QuickSort(array) - should sort the array', function (t) {
+  var data = [5, 3, 88, 1, 23, 5, 0, -4];
+  var expected = [-4, 0, 1, 3, 5, 5, 23, 88];
+  var result = (0, _indexMin.QuickSort)(data);
   t.deepEqual(expected, result, 'Output should be sorted');
-
   t.end();
 });
+(0, _tape["default"])('QuickSort(array, comparator) - should sort the array using a custom comparator', function (t) {
+  var data = ['CC', 'BB', 'BB', 'BB', 'CC', 'AA', 'BB'];
+  var expected = ['CC', 'CC', 'BB', 'BB', 'BB', 'BB', 'AA'];
 
-test('QuickSort(array, comparator) - should sort the array using a custom comparator', t => {
-  const data = ['CC', 'BB', 'BB', 'BB', 'CC', 'AA', 'BB'];
-  const expected = ['CC', 'CC', 'BB', 'BB', 'BB', 'BB', 'AA'];
-  const descending = (a, b) => a > b;
-  const result = QuickSort(data, descending);
+  var descending = function descending(a, b) {
+    return a > b;
+  };
 
+  var result = (0, _indexMin.QuickSort)(data, descending);
   t.deepEqual(expected, result, 'Output should be sorted');
-
   t.end();
 });

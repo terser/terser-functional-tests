@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const assert = require('assert');
-const { readFileSync, writeFileSync } = require('fs');
+const { readFileSync, writeFileSync, readdirSync } = require('fs');
 const { execSync } = require('child_process');
 const { minify } = require(process.env.TERSER_PATH || 'terser');
 
@@ -15,4 +15,9 @@ if (minified.error) {
 }
 writeFileSync('../computer-science/index.min.js', minified.code)
 
-execSync('npm t', { stdio: ['pipe', process.stdout, process.stderr] });
+const run = command => execSync(command, { stdio: ['pipe', process.stdout, process.stderr] });
+
+for (const file of readdirSync('tests')) {
+  run('node tests/' + file)
+}
+

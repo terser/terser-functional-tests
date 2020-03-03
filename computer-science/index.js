@@ -806,4 +806,4 @@ class QuickUnion {
   }
 }
 
-export { BubbleSort, InsertionSort, LinkedList, Queue, QuickFind, QuickSort, QuickUnion, SelectionSort, Set, Stack };
+module.exports = { BubbleSort, InsertionSort, LinkedList, Queue, QuickFind, QuickSort, QuickUnion, SelectionSort, Set, Stack };
