@@ -2,13 +2,9 @@
 
 set -e
 
-source ~/.nvm/nvm.sh
-
-# Requires nvm to be installed on the environment. Runs as login shell to load user's login stuff
-
 export TERSER_PATH=${TERSER_PATH:-$(pwd)/../terser}
 
-echo "NEED NODE 12"
+echo "NEED NODE 12 (probably)"
 node -v
 
 set -eo pipefail
