@@ -2,7 +2,7 @@
 
 'use strict'
 
-const terser = require('terser')
+const terser = require(process.env.TERSER_PATH || 'terser')
 const { addHook } = require('pirates')
 const { execSync } = require('child_process')
 
