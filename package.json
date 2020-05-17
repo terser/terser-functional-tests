@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "./run-all.sh"
+    "test": "make --output-sync -j8 all"
   },
   "repository": {
     "type": "git",
