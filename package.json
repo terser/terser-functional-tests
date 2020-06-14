@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/terser/terser-functional-tests#readme",
   "dependencies": {
-    "@terser/require-terser": "^1.0.1",
+    "@terser/require-terser": "^1.1.0",
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-standard": "^14.1.0",
@@ -36,6 +36,7 @@
     "mocha": "^6.2.2",
     "mochallel": "^2.0.0",
     "murmurhash": "0.0.2",
+    "pirates": "^4.0.1",
     "ts-node-register": "^1.0.0",
     "variable-diff": "^2.0.1"
   }

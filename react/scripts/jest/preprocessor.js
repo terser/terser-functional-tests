@@ -1,11 +1,11 @@
 'use strict';
 
-const assert = require('assert')
+const compileSync = require('@terser/require-terser/compile-sync');
+const assert = require('assert');
 const path = require('path');
 
 const babel = require('@babel/core');
 const coffee = require('coffee-script');
-const terser = require(process.env.TERSER_PATH)
 
 const tsPreprocessor = require('./typescript/preprocessor');
 const createCacheKeyFunction = require('fbjs-scripts/jest/createCacheKeyFunction');
@@ -94,7 +94,7 @@ module.exports = {
     }
     assert(typeof src === 'string')
 
-    return terser.minify(src, {
+    return compileSync(src, {
       keep_fnames: true,
       compress: {
         defaults: false,
