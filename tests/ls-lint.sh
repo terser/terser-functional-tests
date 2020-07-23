@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 
-npm run ls-lint
+(cd node_modules/terser && yarn ls-lint)

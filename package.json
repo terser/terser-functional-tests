@@ -7,7 +7,6 @@
     "test": "tests"
   },
   "scripts": {
-    "ls-lint": "ls-lint",
     "test": "make --output-sync -j8 all"
   },
   "repository": {
