@@ -33,6 +33,7 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "eslint-plugin-standard": "^4.0.1",
+    "@ls-lint/ls-lint": "^1.9.2",
     "mocha": "^6.2.2",
     "mochallel": "^2.0.0",
     "murmurhash": "0.0.2",
