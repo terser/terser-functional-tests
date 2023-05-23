@@ -34,7 +34,6 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "eslint-plugin-standard": "^4.0.1",
     "mocha": "^6.2.2",
-    "mochallel": "^2.0.0",
     "murmurhash": "0.0.2",
     "pirates": "^4.0.1",
     "ts-node-register": "^1.0.0",
